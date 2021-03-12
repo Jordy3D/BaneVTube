@@ -49,4 +49,11 @@ public class AnalogueGlitch : MonoBehaviour
     Graphics.Blit(source, destination, _material);
   }
   #endregion
+
+  #region Public Functions
+  public void SetScanlineJitter(System.Single _val) => _ScanLineJitter = _val;
+  public void SetVerticalJump(System.Single _val) => _VerticalJump = _val;
+  public void SetHorizontalShake(System.Single _val) => _HorizontalShake = _val;
+  public void SetColourDrift(System.Single _val) => _ColourDrift = _val;
+  #endregion
 }

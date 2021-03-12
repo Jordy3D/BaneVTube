@@ -66,6 +66,7 @@ public class UnityCapture : MonoBehaviour
 
     void OnDestroy()
     {
+    if (CaptureInterface != null)
         CaptureInterface.Close();
     }
 
