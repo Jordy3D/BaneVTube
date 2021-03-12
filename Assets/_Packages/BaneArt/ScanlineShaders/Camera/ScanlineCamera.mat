@@ -45,6 +45,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Float0: 0.05
-    - _ScanlineTransparency: 0.2
+    - _ScanlineTransparency: 0
     m_Colors:
     - _ScanlineSpeed: {r: 0, g: 0.1, b: 0, a: 0}
