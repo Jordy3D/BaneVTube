@@ -872,6 +872,7 @@ MonoBehaviour:
   followX: 0
   followY: 1
   followZ: 0
+  followVector: {x: 0, y: 1, z: 0}
 --- !u!1 &409089042
 GameObject:
   m_ObjectHideFlags: 0
@@ -3659,6 +3660,7 @@ MonoBehaviour:
   followX: 0
   followY: 0
   followZ: 0
+  followVector: {x: 1, y: 0, z: 0}
 --- !u!1 &1540465909
 GameObject:
   m_ObjectHideFlags: 0

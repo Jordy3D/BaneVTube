@@ -8,12 +8,22 @@ public class SoftRotateWithBone : MonoBehaviour
   public float rotationModifier = .5f;
 
   public bool followX, followY, followZ;
+  public Vector3 followVector = new Vector3(0f, 0f, 0f);
 
   void Update()
   {
-    Vector3 track = new Vector3(followX ? trackingBone.rotation.x * rotationModifier : transform.localRotation.x,
-                                followY ? trackingBone.rotation.y * rotationModifier : transform.localRotation.y,
-                                followZ ? trackingBone.rotation.z * rotationModifier : transform.localRotation.z);
+    Quaternion trackRotation = trackingBone.rotation;
+    Quaternion localRotation = transform.localRotation;
+    
+    //Vector3 track = new Vector3(followX ? trackRotation.x * rotationModifier : localRotation.x,
+    //                            followY ? trackRotation.y * rotationModifier : localRotation.y,
+    //                            followZ ? trackRotation.z * rotationModifier : localRotation.z);
+    Vector3 modified = trackRotation.eulerAngles * rotationModifier;
+    Vector3 track = localRotation.eulerAngles;
+    track.x = track.x * modified.x * followVector.x;
+    track.y = track.y * modified.y * followVector.y;
+    track.z = track.z * modified.z * followVector.z;
+    
     transform.localRotation = Quaternion.Euler(track);
   }
 }
