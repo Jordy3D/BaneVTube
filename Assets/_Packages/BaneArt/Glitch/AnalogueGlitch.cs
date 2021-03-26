@@ -5,7 +5,7 @@ using UnityEditor;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(Camera))]
-[AddComponentMenu("glitch/Analogue Glitch")]
+[AddComponentMenu("OldStyle/Analogue Glitch")]
 public class AnalogueGlitch : MonoBehaviour
 {
   #region Public Properties
