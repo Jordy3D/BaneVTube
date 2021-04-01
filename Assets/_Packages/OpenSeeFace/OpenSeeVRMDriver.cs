@@ -231,10 +231,10 @@ public class OpenSeeVRMDriver : MonoBehaviour {
     private OpenSeeBlendShapeProxy proxy = new OpenSeeBlendShapeProxy();
     private Animator animator;
     private bool haveJawParameter;
-    private Transform jawBone;
+    public Transform jawBone;
     private Quaternion jawRotation = Quaternion.identity;
-    private HumanBodyBones[] humanBodyBones;
-    private Transform[] humanBodyBoneTransforms;
+  public HumanBodyBones[] humanBodyBones;
+    public Transform[] humanBodyBoneTransforms;
     private Quaternion[] humanBodyBoneRotations;
     
     private VRMBlendShapeProxy lastAvatar = null;

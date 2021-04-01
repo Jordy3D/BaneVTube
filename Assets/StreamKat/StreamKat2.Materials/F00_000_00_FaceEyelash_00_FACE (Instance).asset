@@ -65,7 +65,7 @@ Material:
     - _BlendMode: 1
     - _BumpScale: 1
     - _CullMode: 0
-    - _Cutoff: 0.5
+    - _Cutoff: 0.613
     - _DebugMode: 0
     - _DstBlend: 10
     - _IndirectLightIntensity: 0.1
