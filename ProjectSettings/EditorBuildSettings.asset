@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StreamKatScene.unity
+    guid: 6fae436269315bf47b9b8e4992653133
   m_configObjects: {}

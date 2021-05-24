@@ -2,37 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using OpenSee;
-
-public class BaneVTube : MonoBehaviour
+namespace OpenSee.Bane
 {
-  public OpenSeeVRMDriver driver;
-  public OpenSeeIKTarget target;
-
-  public KeyCode startLipSyncKey = KeyCode.L;
-  public KeyCode recalibrateFacing = KeyCode.O;
-
-  public bool isSyncing;
-  // Start is called before the first frame update
-  void Start()
+  public class BaneVTube : MonoBehaviour
   {
+    public OpenSeeVRMDriver driver;
+    public OpenSeeIKTarget target;
 
-  }
+    public KeyCode startLipSyncKey = KeyCode.L;
+    public KeyCode recalibrateFacing = KeyCode.O;
 
-  // Update is called once per frame
-  void Update()
-  {
-    if (Input.GetKeyDown(startLipSyncKey))
+    public bool isSyncing;
+    void Update()
     {
-      isSyncing = !isSyncing;
+      if (Input.GetKeyDown(startLipSyncKey))
+      {
+        isSyncing = !isSyncing;
 
-      driver.initializeLipSync = isSyncing;
-      driver.lipSync = isSyncing;
-    }
+        driver.initializeLipSync = isSyncing;
+        driver.lipSync = isSyncing;
+      }
 
-    if (Input.GetKeyDown(recalibrateFacing))
-    {
-      target.calibrate = true;
+      if (Input.GetKeyDown(recalibrateFacing))
+        target.calibrate = true;
     }
-  }
+  } 
 }
